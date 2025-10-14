@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Comment Blocker",
+  "version": "1.0",
+  "description": "Hide aggressive comments",
+  "action": {
+    "default_popup": "index.html"
+  }
+}
