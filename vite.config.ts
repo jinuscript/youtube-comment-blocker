@@ -11,11 +11,16 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         content: resolve(__dirname, "scripts/content.ts"),
+        style: resolve(__dirname, "styles/style.css"),
       },
       output: {
-        entryFileNames: (chunk) => {
-          if (chunk.name === "content") return "content.js";
-          return "assets/[name]-[hash].js";
+        entryFileNames: (entry) => {
+          if (entry.name === "content") return "content.js";
+          return "assets/index-[hash].js";
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css") return "style.css";
+          return "assets/index-[hash][extname]";
         },
       },
     },
