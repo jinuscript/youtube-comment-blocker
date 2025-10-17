@@ -5,5 +5,18 @@
   "description": "Hide aggressive comments",
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["/*"],
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ],
+  "permissions": ["storage"]
 }
