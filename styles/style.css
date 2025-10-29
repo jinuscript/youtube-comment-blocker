@@ -1,3 +1,9 @@
+.hideUserButtonContainer {
+  position: absolute;
+  top: -12px;
+  right: 40px;
+}
+
 .hideUserButton {
   width: 40px;
   height: 40px;
